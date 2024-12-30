@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Sliding Image Slider</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    /* Set a fixed height for the carousel */
+    #imageSlider {
+      max-height: 100%;
+      /* Set your desired height */
+      overflow: hidden;
+    }
+    
+:root {
+/*====== Colors (Updated Blue-Purple Theme) ====== */
+--background-primary: #1a1f38; /* Dark blue background matching the logo */
+--background-second: #2b3157; /* Slightly lighter dark blue for secondary backgrounds */
+--first-color: #8c79a8; /* Light purple for key elements */
+--second-color: #634d90; /* Darker purple for secondary elements */
+--title-color: #d0c7e4; /* Soft lavender for titles */
+--text-color-second: #b8aad3; /* Muted purple for secondary text */
+--stats-color: #3d4473; /* Medium blue for stats backgrounds */
+--scrollbar-color: #1a1f38; /* Dark blue scrollbar */
+}
+
+    .carousel-caption {
+      position: absolute;
+      top: 0;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .carousel {
+      background-color: var(--background-primary);
+      padding: 1rem;
+      border-radius: 30px;
+      /* height:200px; */
+    }
+
+
+    .carousel-inner img {
+      /* width: 100%; */
+      margin: auto;
+      height: 100vh !important;
+      object-fit: contain;
+      /* Display the entire image without cropping */
+    }
+
+    .carousel-inner {
+      width: 80%;
+      margin: auto;
+
+    }
+
+
+
+    .carousel-item {
+      /* displ */
+      margin-top: 30px;
+    }
+
+    h3 {
+      /* color:#007acc; */
+      color: rgb(255, 255, 255);
+      /* font-weight: var(--font-bold); */
+      font-family: 'DM Sans';
+      font-size: var(--mb-1);
+    }
+
+    .txt author {
+      color: black
+    }
+
+
+    .carousel-control-next-icon, .carousel-control-prev-icon  {
+      background-color: #1a1f38;
+      border-radius:15px;
+    }
+    /* .button{
+        
+    } */
+    /* .carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+  max-width: none;
+} */
+
+    .author{
+      /* background-color: white; */
+      border-radius:5px;
+      padding:5px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Image Slider -->
+  <div id="imageSlider" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <h3>We had a very good experience with Dr. Arti kapoor and team. She explains everything nicely with lots of patience. The best thing about Sanjivni Rheumatology & Infertility Centre is transparency in treatment. From the very first day of my visit at clinic, confidence was instilled in me. We are happy to say that the proper treatment and guidance of Arti madam helped me to conceive naturally faster. We would highly recommend this center for infertility issues.<br><br>&nbsp;&nbsp; <span class="txt author">  -- Lipi Singh</span></h3>
+      </div>
+      <div class="carousel-item">
+        <h3>We had a very good experience with dr. Sanjeev  kapoor sir. Dr. Arti Ma'am Rheumatology & lnfertility   Centre  jab se pahale baar
+          aaye to buhut paresan the me Ab mujhe bahut aaram hai yaha pe sare sataf fimliy jaise rahe hai ab mere health bhi mara  yaha se
+          Elaaj huwa to Aaj meri 1beti hai thank you so much ma'am
+          Buhut accha hai  thank you so much  Sanjeev Kapoor,,,& arti  kapoor<br><br> &nbsp;&nbsp;<span class="txt author"> -- Suchita Vashwakarma</span></h3>
+      </div>
+      <div class="carousel-item">
+        <h3>We are happy and highly recommend Dr. Aarti Kapoor for fertility treatment. She is like my mother always care like a family.
+          <br><br> &nbsp;&nbsp;<span class="txt author"> -- Shruti Naithani</span></h3>
+      </div>
+      <div class="carousel-item">
+        <h3>We had a   Wonderfull experience  with dr Arti  Kapoor and team …… always treat like a family member …
+          <br><br> &nbsp;&nbsp;<span class="txt author"> -- Shubhinder Virk</span></h3>
+      </div>
+      <div class="carousel-item">
+        <h3>Could’nt have asked for a better Gynae. The hospitality of the staff as well as Dr. Aarti is really commendable.
+          <br><br> &nbsp;&nbsp;<span class="txt author"> -- Disha Batra</span></h3>
+      </div>
+      <div class="carousel-item">
+        <h3>Very nice doctor and help full mujhe to umeed nahi thi par yaha aake mujhe mam ne hosla or himmat di ki sab possible h but àapko v trust karna hoga tabhi sab thik hoga please jinko v baby nahi ho raha h plz ek baar jarur mam se miliye very nice doctor
+          <br><br> &nbsp;&nbsp;<span class="txt author"> -- Puja Kumari</span></h3>
+      </div>
+      <div class="carousel-item">
+        <h3>Dr Arti Kapoor gave us Best Solution for Fertility.We are treated like a family members.We are very Happy and Recommend Dr Arti Kappor for Fertility Solution.Sonia and Pankaj from staff are very cooperative
+          <br><br> &nbsp;&nbsp;<span class="txt author"> -- Vandana Dubey</span></h3>
+      </div>
+      <div class="carousel-item">
+        <h3>We have no baby since last 5 years and somebody recommend Dr. Arti Kapoor. Finally by the grace of Dr. Arti Kapoor and her great efforts, we have a baby now. I highly recommend Dr. Arti Kapoor as specialist in gynecology.
+          <br><br> &nbsp;&nbsp;<span class="txt author"> -- Nitin Jain</span></h3>
+      </div>
+      <!-- <div class="carousel-item">
+        <h3>
+          <br><br> &nbsp;&nbsp;<span class="txt author"> -- </span></h3>
+      </div>
+      <div class="carousel-item">
+        <h3>
+          <br><br> &nbsp;&nbsp;<span class="txt author"> -- </span></h3>
+      </div> -->
+    </div>
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#imageSlider" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#imageSlider" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Bootstrap JS with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script>
+    // Optional: Customize the auto-slide interval
+    const slider = document.querySelector('#imageSlider');
+    const carousel = new bootstrap.Carousel(slider, {
+      interval: 1000000, // Auto slide every 3 seconds
+      pause: 'hover' // Pause on hover
+    });
+  </script>
+</body>
+
+</html>

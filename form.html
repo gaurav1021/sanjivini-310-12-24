@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    form {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      font-family: inherit;
+      background-color: #f9f9f9;
+      box-sizing: border-box;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      border-color: var(--first-color);
+      outline: none;
+      background-color: #fff;
+    }
+
+    form button {
+      width: 100%;
+      background-color: var(--first-color);
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #4547d9;
+    }
+
+    /* Responsive design for smaller screens */
+    @media (max-width: 500px) {
+      form {
+        padding: 15px;
+      }
+
+      form input,
+      form textarea,
+      form button {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+</body>
+
+</html>
