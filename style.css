@@ -969,7 +969,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .home-content {
-  height: 50vh;
+  height: 80vh;
   /* margin:10px; */
 }
 
@@ -998,7 +998,7 @@ body::-webkit-scrollbar-thumb {
 @media (max-width: 340px) {
 
 	.home-content {
-    		height: 30vh !important;
+    		height: 50vh !important;
 	}
 
   #new-logoo {
@@ -1013,7 +1013,7 @@ body::-webkit-scrollbar-thumb {
 
 @media (min-width: 341px ) and ( max-width: 390px) {
 	.home-content {
-    		height: 40vh !important;
+    		height: 80vh !important;
 	}
 
   #new-logoo {
@@ -1028,7 +1028,7 @@ body::-webkit-scrollbar-thumb {
 @media (min-width:391px) and ( max-width: 568px) {
 
 	.home-content {
-    		height: 50vh !important;
+    		height: 70vh !important;
 	}
 
   #new-logoo {
@@ -1043,7 +1043,7 @@ body::-webkit-scrollbar-thumb {
 //tablet
 @media (min-width:569px & max-width: 768px) {
 	.home-content {
-    		height: 60vh !important;
+    		height: 80vh !important;
 	}
 }
 
@@ -1053,7 +1053,7 @@ body::-webkit-scrollbar-thumb {
 
 @media (min-width:769 & max-width: 994px) {
 	.home-content {
-    		height: 70vh !important;
+    		height: 85vh !important;
 	}
 }
 
@@ -1394,7 +1394,7 @@ body {
   margin: 1rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 200px;
+  width: 230px;
   transition: transform 0.3s ease;
 }
 
