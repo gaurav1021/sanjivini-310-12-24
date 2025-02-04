@@ -27,9 +27,10 @@
     Sanjivni Rheumatology & Infertility Centre
   </title>
   <style>
-    .pxe-fixed{
+    .pxe-fixed {
       bottom: 1rem !important;
     }
+
     .about-img {
       display: flex;
       justify-content: center;
@@ -55,18 +56,25 @@
 
 
     @media screen and (max-width: 1200px) {
-      .ul-links > li {
+      .ul-links>li {
         margin: 50px 0px !important;
       }
     }
 
 
 
-    #idForAbout{
-      padding:25px 0px;
+    #idForAbout {
+      padding: 25px 0px;
     }
 
+    .stat-cluster {
+      display: inline-flex;
+      align-items: center;
+    }
 
+    .stat-number {
+      margin-right: 10px;
+    }
   </style>
 </head>
 
@@ -142,11 +150,25 @@
     <section class="stats-section">
       <div class="container" id="banner">
         <div class="stat-item">
-          <h3 class="stat-number" data-target="100000">0</h3>
+          <span class="stat-cluster">
+            <h3 class="stat-number" data-target="100000">0</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-plus"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+            </svg>
+          </span>
           <p>OPD consultation</p>
         </div>
         <div class="stat-item">
-          <h3 class="stat-number" data-target="1200">0</h3>
+          <span class="stat-cluster">
+            <h3 class="stat-number" data-target="1200">0</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-plus"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+            </svg>
+          </span>
           <p>Successful Deliveries</p>
         </div>
       </div>
@@ -181,9 +203,9 @@
             <h6>
               Monday - Saturday
             </h6>
-            <span>
+            <!-- <span>
               09:00AM - 10:30AM
-            </span>
+            </span> -->
             <span>
               05:00PM - 08:30PM
             </span>
@@ -192,10 +214,10 @@
       </div>
     </section>
 
-    
+
     <section class="services-section" id="rheumatologyServices">
       <h2>Our Services</h2>
-    
+
       <div class="service">
         <div class="service-header" onclick="toggleSubServices('service1')">
           <h3>Rheumatology Care</h3>
@@ -206,62 +228,89 @@
             <p>Rheumatoid Arthritis</p>
             <span class="toggle-desc">+</span>
             <div class="description" id="desc1">
-              <p>Rheumatoid arthritis (RA) is an autoimmune disease that primarily affects the joints, causing inflammation, pain, and stiffness. Unlike osteoarthritis, which is due to wear and tear on the joints, RA occurs when the body's immune system mistakenly attacks its own tissues, specifically the synovium (the lining of the joints). This leads to swelling, redness, and warmth in the affected joints, often making movement difficult and painful.</p>
+              <p>Rheumatoid arthritis (RA) is an autoimmune disease that primarily affects the joints, causing
+                inflammation, pain, and stiffness. Unlike osteoarthritis, which is due to wear and tear on the joints,
+                RA occurs when the body's immune system mistakenly attacks its own tissues, specifically the synovium
+                (the lining of the joints). This leads to swelling, redness, and warmth in the affected joints, often
+                making movement difficult and painful.</p>
             </div>
           </li>
           <li onclick="toggleDescription('desc2')">
             <p>Ankylosing Spondylitis</p>
             <span class="toggle-desc">+</span>
             <div class="description" id="desc2">
-              <p>Ankylosing spondylitis (AS) is a type of inflammatory arthritis primarily affecting the spine, although it can also involve other joints and structures in the body. It belongs to a group of diseases known as spondyloarthropathies, which share common features like inflammatory arthritis, enthesitis (inflammation where tendons and ligaments attach to bone), and a tendency to affect the spine and sacroiliac joints (where the spine meets the pelvis).</p>
+              <p>Ankylosing spondylitis (AS) is a type of inflammatory arthritis primarily affecting the spine, although
+                it can also involve other joints and structures in the body. It belongs to a group of diseases known as
+                spondyloarthropathies, which share common features like inflammatory arthritis, enthesitis (inflammation
+                where tendons and ligaments attach to bone), and a tendency to affect the spine and sacroiliac joints
+                (where the spine meets the pelvis).</p>
             </div>
           </li>
           <li onclick="toggleDescription('desc3')">
             <p>Interstitial Lung Disease (ILD)</p>
             <span class="toggle-desc">+</span>
             <div class="description" id="desc3">
-              <p>Interstitial Lung Disease (ILD) is a broad category of lung disorders that involve inflammation and scarring (fibrosis) of the lung tissue, specifically the interstitial space — the tissue and space around the air sacs (alveoli) in the lungs. These conditions are often characterized by a progressive decline in lung function, leading to breathing difficulties.</p>
+              <p>Interstitial Lung Disease (ILD) is a broad category of lung disorders that involve inflammation and
+                scarring (fibrosis) of the lung tissue, specifically the interstitial space — the tissue and space
+                around the air sacs (alveoli) in the lungs. These conditions are often characterized by a progressive
+                decline in lung function, leading to breathing difficulties.</p>
             </div>
           </li>
           <li onclick="toggleDescription('desc4')">
             <p>SLE (Lupus)</p>
             <span class="toggle-desc">+</span>
             <div class="description" id="desc4">
-              <p>Lupus (or Systemic Lupus Erythematosus, SLE) is a chronic autoimmune disease in which the immune system mistakenly attacks the body's own tissues and organs. This abnormal immune response leads to inflammation and damage in various parts of the body, including the skin, joints, kidneys, heart, lungs, and brain.</p>
+              <p>Lupus (or Systemic Lupus Erythematosus, SLE) is a chronic autoimmune disease in which the immune system
+                mistakenly attacks the body's own tissues and organs. This abnormal immune response leads to
+                inflammation and damage in various parts of the body, including the skin, joints, kidneys, heart, lungs,
+                and brain.</p>
             </div>
           </li>
           <li onclick="toggleDescription('desc5')">
             <p>Osteoarthritis (OA)</p>
             <span class="toggle-desc">+</span>
             <div class="description" id="desc5">
-              <p>Osteoarthritis (OA) is the most common form of arthritis and is a degenerative joint disease characterized by the breakdown of cartilage, the tissue that cushions the joints. OA affects the synovial joints, which are the most common type of joints in the body, such as the knees, hips, hands, and spine.</p>
+              <p>Osteoarthritis (OA) is the most common form of arthritis and is a degenerative joint disease
+                characterized by the breakdown of cartilage, the tissue that cushions the joints. OA affects the
+                synovial joints, which are the most common type of joints in the body, such as the knees, hips, hands,
+                and spine.</p>
             </div>
           </li>
           <li onclick="toggleDescription('desc6')">
             <p>Gout</p>
             <span class="toggle-desc">+</span>
             <div class="description" id="desc6">
-              <p>Gout is a form of inflammatory arthritis that is characterized by sudden, severe pain, redness, and swelling in the joints. It is caused by the buildup of uric acid crystals in the joints, leading to an intense inflammatory response. Gout most commonly affects the big toe but can involve other joints, including the ankles, knees, elbows, and wrists.</p>
+              <p>Gout is a form of inflammatory arthritis that is characterized by sudden, severe pain, redness, and
+                swelling in the joints. It is caused by the buildup of uric acid crystals in the joints, leading to an
+                intense inflammatory response. Gout most commonly affects the big toe but can involve other joints,
+                including the ankles, knees, elbows, and wrists.</p>
             </div>
           </li>
           <li onclick="toggleDescription('desc7')">
             <p>Sjögren's Syndrome</p>
             <span class="toggle-desc">+</span>
             <div class="description" id="desc7">
-              <p>Sjögren's syndrome is a chronic autoimmune disorder that primarily affects the body's exocrine glands, which are responsible for secreting moisture. The most commonly affected glands are those that produce saliva and tears, leading to the hallmark symptoms of dry mouth (xerostomia) and dry eyes (keratoconjunctivitis sicca). In addition to these primary symptoms, Sjögren's syndrome can also affect other parts of the body, such as the joints, skin, lungs, kidneys, and nervous system.</p>
+              <p>Sjögren's syndrome is a chronic autoimmune disorder that primarily affects the body's exocrine glands,
+                which are responsible for secreting moisture. The most commonly affected glands are those that produce
+                saliva and tears, leading to the hallmark symptoms of dry mouth (xerostomia) and dry eyes
+                (keratoconjunctivitis sicca). In addition to these primary symptoms, Sjögren's syndrome can also affect
+                other parts of the body, such as the joints, skin, lungs, kidneys, and nervous system.</p>
             </div>
           </li>
           <li onclick="toggleDescription('desc8')">
             <p>Juvenile Arthritis (JA)</p>
             <span class="toggle-desc">+</span>
             <div class="description" id="desc8">
-              <p>Juvenile Arthritis (JA), also known as Juvenile Idiopathic Arthritis (JIA), is an umbrella term used to describe a group of autoimmune diseases that cause chronic joint inflammation in children under the age of 16. It is the most common form of arthritis in children and can lead to joint pain, swelling, stiffness, and potential joint damage if not properly managed.</p>
+              <p>Juvenile Arthritis (JA), also known as Juvenile Idiopathic Arthritis (JIA), is an umbrella term used to
+                describe a group of autoimmune diseases that cause chronic joint inflammation in children under the age
+                of 16. It is the most common form of arthritis in children and can lead to joint pain, swelling,
+                stiffness, and potential joint damage if not properly managed.</p>
             </div>
           </li>
         </ul>
       </div>
 
-      </section>
+    </section>
     <section class="about-content">
       <div class="about-img bottomRevealMedium">
         <img src="pages/images/Dr-Arti-Kapoor.jpeg" alt="Dr. Arti Kapoor" />
@@ -321,11 +370,11 @@
                 inflammation in various parts of the body.</p>
             </div>
           </li> -->
-          <!-- Add more sub-services as needed -->
-        <!-- </ul>
+    <!-- Add more sub-services as needed -->
+    <!-- </ul>
       </div> -->
 
-      <!-- <div class="service">
+    <!-- <div class="service">
         <div class="service-header" onclick="toggleSubServices('service2')">
           <h3>Infertility Treatment</h3>
           <span class="toggle-btn">+</span>
@@ -345,16 +394,16 @@
               <p>A fertility treatment that involves placing sperm inside the uterus to facilitate fertilization.</p>
             </div>
           </li> -->
-          <!-- Add more sub-services as needed -->
-        <!-- </ul>
+    <!-- Add more sub-services as needed -->
+    <!-- </ul>
       </div> -->
 
-      <!-- Add more services here -->
+    <!-- Add more services here -->
 
     <!-- </section>  -->
     <section class="services-section" id="infertilityServices">
       <h2>Infertility Care</h2>
-    
+
       <div class="service">
         <div class="service-header" onclick="toggleSubServices('service2')">
           <h3>Infertility Treatments</h3>
@@ -365,76 +414,95 @@
             <p>Natural Conception Techniques</p>
             <span class="toggle-desc">+</span>
             <div class="description" id="desc9">
-              <p>Natural conception techniques focus on optimizing fertility without the use of assisted reproductive technologies (ART), such as in vitro fertilization (IVF). These methods generally aim to enhance the likelihood of pregnancy through lifestyle adjustments, timing, and natural health practices.</p>
+              <p>Natural conception techniques focus on optimizing fertility without the use of assisted reproductive
+                technologies (ART), such as in vitro fertilization (IVF). These methods generally aim to enhance the
+                likelihood of pregnancy through lifestyle adjustments, timing, and natural health practices.</p>
             </div>
           </li>
           <li onclick="toggleDescription('desc10')">
             <p>Fertility Enhancing Surgeries</p>
             <span class="toggle-desc">+</span>
             <div class="description" id="desc10">
-              <p>Fertility-enhancing surgeries are medical procedures designed to correct structural or functional issues that may interfere with conception. These surgeries can address both female and male fertility problems and are often considered when natural conception efforts have been unsuccessful.</p>
+              <p>Fertility-enhancing surgeries are medical procedures designed to correct structural or functional
+                issues that may interfere with conception. These surgeries can address both female and male fertility
+                problems and are often considered when natural conception efforts have been unsuccessful.</p>
             </div>
           </li>
           <li onclick="toggleDescription('desc11')">
             <p>Sperm Function Test</p>
             <span class="toggle-desc">+</span>
             <div class="description" id="desc11">
-              <p>A sperm function test is a diagnostic procedure used to assess the quality and performance of sperm in terms of its ability to fertilize an egg. These tests help identify male infertility issues that may not be apparent through routine semen analysis.</p>
+              <p>A sperm function test is a diagnostic procedure used to assess the quality and performance of sperm in
+                terms of its ability to fertilize an egg. These tests help identify male infertility issues that may not
+                be apparent through routine semen analysis.</p>
             </div>
           </li>
           <li onclick="toggleDescription('desc12')">
             <p>IUI (Intrauterine Insemination)</p>
             <span class="toggle-desc">+</span>
             <div class="description" id="desc12">
-              <p>Intrauterine Insemination (IUI) is a type of artificial insemination that involves placing sperm directly into a woman's uterus at the time of ovulation to increase the chances of fertilization. The procedure is relatively simple and minimally invasive.</p>
+              <p>Intrauterine Insemination (IUI) is a type of artificial insemination that involves placing sperm
+                directly into a woman's uterus at the time of ovulation to increase the chances of fertilization. The
+                procedure is relatively simple and minimally invasive.</p>
             </div>
           </li>
           <li onclick="toggleDescription('desc13')">
             <p>ICSI (Intracytoplasmic Sperm Injection)</p>
             <span class="toggle-desc">+</span>
             <div class="description" id="desc13">
-              <p>Intracytoplasmic Sperm Injection (ICSI) is an advanced form of in vitro fertilization (IVF) that involves injecting a single sperm directly into an egg to facilitate fertilization. This procedure is used when there are severe male infertility issues.</p>
+              <p>Intracytoplasmic Sperm Injection (ICSI) is an advanced form of in vitro fertilization (IVF) that
+                involves injecting a single sperm directly into an egg to facilitate fertilization. This procedure is
+                used when there are severe male infertility issues.</p>
             </div>
           </li>
           <li onclick="toggleDescription('desc14')">
             <p>IVF (In Vitro Fertilization)</p>
             <span class="toggle-desc">+</span>
             <div class="description" id="desc14">
-              <p>In vitro fertilization (IVF) is one of the most well-known and effective assisted reproductive technologies (ART) used to help couples with infertility conceive. IVF involves fertilizing an egg outside the body and transferring the resulting embryo into the uterus.</p>
+              <p>In vitro fertilization (IVF) is one of the most well-known and effective assisted reproductive
+                technologies (ART) used to help couples with infertility conceive. IVF involves fertilizing an egg
+                outside the body and transferring the resulting embryo into the uterus.</p>
             </div>
           </li>
           <li onclick="toggleDescription('desc15')">
             <p>Blastocyst Culture</p>
             <span class="toggle-desc">+</span>
             <div class="description" id="desc15">
-              <p>Blastocyst culture is a key step in IVF where embryos are cultured for an extended period (5 to 6 days) to reach the blastocyst stage before being transferred into the uterus. This advanced technique improves pregnancy success rates.</p>
+              <p>Blastocyst culture is a key step in IVF where embryos are cultured for an extended period (5 to 6 days)
+                to reach the blastocyst stage before being transferred into the uterus. This advanced technique improves
+                pregnancy success rates.</p>
             </div>
           </li>
           <li onclick="toggleDescription('desc16')">
             <p>Intrauterine Infusion of PRP</p>
             <span class="toggle-desc">+</span>
             <div class="description" id="desc16">
-              <p>Intrauterine Infusion of Platelet-Rich Plasma (PRP) is a fertility treatment that enhances uterine receptivity and improves pregnancy outcomes. PRP is derived from the patient's blood and stimulates tissue repair and uterine lining optimization.</p>
+              <p>Intrauterine Infusion of Platelet-Rich Plasma (PRP) is a fertility treatment that enhances uterine
+                receptivity and improves pregnancy outcomes. PRP is derived from the patient's blood and stimulates
+                tissue repair and uterine lining optimization.</p>
             </div>
           </li>
           <li onclick="toggleDescription('desc17')">
             <p>Oocyte Cryopreservation</p>
             <span class="toggle-desc">+</span>
             <div class="description" id="desc17">
-              <p>Oocyte Cryopreservation, or egg freezing, is a fertility preservation technique for women to store their eggs for future use, allowing reproductive potential to be maintained in cases of delayed parenthood or medical conditions.</p>
+              <p>Oocyte Cryopreservation, or egg freezing, is a fertility preservation technique for women to store
+                their eggs for future use, allowing reproductive potential to be maintained in cases of delayed
+                parenthood or medical conditions.</p>
             </div>
           </li>
           <li onclick="toggleDescription('desc18')">
             <p>DNA Fragmentation Test</p>
             <span class="toggle-desc">+</span>
             <div class="description" id="desc18">
-              <p>The DNA Fragmentation Test evaluates the integrity of sperm DNA, identifying damage or fragmentation that may affect fertility, especially in cases of unexplained infertility.</p>
+              <p>The DNA Fragmentation Test evaluates the integrity of sperm DNA, identifying damage or fragmentation
+                that may affect fertility, especially in cases of unexplained infertility.</p>
             </div>
           </li>
         </ul>
       </div>
     </section>
-    
+
 
 
 
@@ -445,7 +513,7 @@
 
 
     <div class="reviews">
-      <h2>Client Reviews</h2>
+      <h2>Patient Testimonials</h2>
       <iframe id="review-slide" src="./reviews.html" width="100%" height="265px"></iframe>
     </div>
 
@@ -466,7 +534,8 @@
           </button> -->
         </div>
         <div class="mapCont">
-          <div class="contact-content-img topRevealLarge mapImgCont" onclick="window.location.href='https://www.google.com/maps/dir//Sanjivni+Rheumatology+%26+Infertility+Centre,+107,+Kendriya+Vidyalaya+Rd,+near+Gita+mandir,+C-2+Block,+Janakpuri,+New+Delhi,+Delhi,+110058/@28.620737,77.085238,15z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390d04b0b37c0f45:0x4976381f2f98aaa1!2m2!1d77.085238!2d28.620737!3e0?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D';">
+          <div class="contact-content-img topRevealLarge mapImgCont"
+            onclick="window.location.href='https://www.google.com/maps/dir//Sanjivni+Rheumatology+%26+Infertility+Centre,+107,+Kendriya+Vidyalaya+Rd,+near+Gita+mandir,+C-2+Block,+Janakpuri,+New+Delhi,+Delhi,+110058/@28.620737,77.085238,15z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390d04b0b37c0f45:0x4976381f2f98aaa1!2m2!1d77.085238!2d28.620737!3e0?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D';">
             <img class="contact-img mapsImg" src="pages/images/maps.png" alt="" />
             <p class="accessMap">Access location</p>
             <!-- <img class="contact-img" src="pages/images/maps.jpg" alt="" /> -->
@@ -510,7 +579,8 @@
             <button type="submit" class="submit-btn">Book Appointment</button>
             <div class="terms">
               <input type="checkbox" id="terms" required>
-              <label for="terms">By clicking "Book Appointment", you agree to our <a href="#">Privacy Policy</a> and <a href="#">T&C</a></label>
+              <label for="terms">By clicking "Book Appointment", you agree to our <a href="#">Privacy Policy</a> and <a
+                  href="#">T&C</a></label>
             </div>
             <!-- <p class="emi-info">Easy Zero Interest EMI Plans starting from INR 4,167*</p> -->
             <p class="data-safe">No need to worry, your data is 100% Safe with us!</p>
@@ -518,7 +588,7 @@
         </div>
       </div>
     </section>
-    
+
 
   </main>
 
@@ -530,7 +600,7 @@
           <h2>Sanjivni Rheumatology & Infertility Centre</h2>
           <p>Copyright ©2024 All Rights Reserved.<br> Design & Developed by <a href="" id="trishna">Trishna</a></p>
         </div>
-<!-- 
+        <!-- 
         <div class="footer-social">
           <a href="#"><i class="bi bi-facebook nav-icon"></i></a>
           <a href="#"><i class="bi bi-instagram nav-icon"></i></a>
